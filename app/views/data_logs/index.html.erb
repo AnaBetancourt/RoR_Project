@@ -1,5 +1,5 @@
 <h1>All Logs</h1>
 
 <ul><% @data_logs.each do |log| %>
-    <li>Source IP: <%= log.source_ip %><br>Destination IP: <%= log.destination_ip %><%= button_to "Delete Log", data_log_path(log), method: :delete %></li>
+    <li>Source IP: <%= log.source_ip %><br>Destination IP: <%= log.destination_ip %><%= button_to "Delete Log", data_log_path(log), method: :delete %><br></li>
 <% end %></ul>
