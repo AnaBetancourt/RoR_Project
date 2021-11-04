@@ -18,12 +18,14 @@ class DataLogsController < ApplicationController
     end
 
     def destroy
+        DataLog.find(params[:id]).destroy
+        redirect_to data_logs_path
     end
 
     private
 
     def data_log_params
-        params.require(:data_log).permit(:log)
+        params.require(:data_log).permit(:log, :id)
     end
 
 end

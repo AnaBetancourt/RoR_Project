@@ -1,5 +1,5 @@
 <h1>All Logs</h1>
 
 <ul><% @data_logs.each do |log| %>
-    <li><%= log.log %></li>
+    <li><%= log.log %><%= button_to "Delete Log", data_log_path(log), method: :delete %></li>
 <% end %></ul>
