@@ -25,7 +25,7 @@ class DataLogsController < ApplicationController
     private
 
     def data_log_params
-        params.require(:data_log).permit(:log, :id)
+        params.require(:data_log).permit(:log)
     end
 
 end
