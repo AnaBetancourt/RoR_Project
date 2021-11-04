@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_02_040331) do
+ActiveRecord::Schema.define(version: 2021_11_04_181358) do
 
   create_table "data_logs", force: :cascade do |t|
-    t.string "source_ip"
-    t.string "destination_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "log"
   end
 
 end
