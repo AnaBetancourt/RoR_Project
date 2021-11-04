@@ -11,9 +11,9 @@ class DataLogsController < ApplicationController
     end
 
     def create
-        @data_log = DataLog.new
+        @data_log = DataLog.new(data_log_params)
         if @data_log.save
-            binding.pry
+            redirect_to data_logs_path
         end
     end
 
