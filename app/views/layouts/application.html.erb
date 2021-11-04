@@ -13,4 +13,8 @@
   <body>
     <%= yield %>
   </body>
+  <hr>
+      <%= link_to "Home", root_path %> |
+      <%= link_to "All Logs", data_logs_path %> |
+      <%= link_to "Add New Log", new_data_log_path %> 
 </html>
