@@ -38,4 +38,12 @@ class DataLog < ApplicationRecord
         end
     end
 
+    def private?(ip)
+        if ip.split(".")[0] == "10" && ip.split(".")[1] == "0" || ip.split(".")[0] == "172" && ip.split(".")[1] == "16" || ip.split(".")[0] == "192" && ip.split(".")[1] == "168"
+            return "private address"
+        else
+            return "public address"
+        end
+    end
+
 end
