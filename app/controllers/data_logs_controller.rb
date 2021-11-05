@@ -1,5 +1,3 @@
-require 'pry'
-
 class DataLogsController < ApplicationController
     
     def index

@@ -2,8 +2,8 @@
 
 <ul><% @data_logs.each do |log| %>
     <li>
-        Source IP: <%= log.source_ip %><br> <%= log.valid?(log.source_ip) %>
-        Destination IP: <%= log.destination_ip %>
+        Source IP: <%= log.source_ip %> - <%= log.valid?(log.source_ip) %><br>
+        Destination IP: <%= log.destination_ip %> - <%= log.valid?(log.destination_ip) %><br>
         <%= button_to "Delete Log", data_log_path(log), method: :delete %><br>
     </li>
 <% end %></ul>

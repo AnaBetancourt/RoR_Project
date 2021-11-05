@@ -26,4 +26,16 @@ class DataLog < ApplicationRecord
         return log_hash["dst"]
     end
 
+    def valid?(ip)
+        if ip.split(".").length == 4 && ip.split(".")[0].match?(/[[:digit:]]/) && ip.split(".")[0].to_i > 0 && ip.split(".")[0].to_i <= 255 && 
+            ip.split(".")[1].match?(/[[:digit:]]/) && ip.split(".")[1].to_i > 0 && ip.split(".")[1].to_i <= 255 && 
+            ip.split(".")[2].match?(/[[:digit:]]/) && ip.split(".")[2].to_i > 0 && ip.split(".")[2].to_i <= 255 && 
+            ip.split(".")[3].match?(/[[:digit:]]/) && ip.split(".")[3].to_i > 0 && ip.split(".")[3].to_i <= 255
+            
+            return "valid address"
+        else
+            return "invalid address"
+        end
+    end
+
 end
